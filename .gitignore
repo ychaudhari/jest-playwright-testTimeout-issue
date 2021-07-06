@@ -1,0 +1,5 @@
+node_modules
+.env
+/output/*
+/build/
+/tests/e2e/features/__image_snapshots__/__diff_output__/
