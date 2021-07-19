@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "target": "ES2019",
     "forceConsistentCasingInFileNames": true,
     "lib": ["ES2019", "ES2015", "dom"],

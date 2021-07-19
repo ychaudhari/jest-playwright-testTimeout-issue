@@ -14,6 +14,6 @@ export default async (): Promise<Config.InitialOptions> => {
     reporters: [
       'default',
     ],
-    testTimeout: 4000,
+    testTimeout: 18000,
   };
 };

@@ -1,32 +1,14 @@
-import { JestPlaywrightConfig } from "jest-playwright-preset";
-
-describe("sample test", () => {
+describe("Long running test", () => {
   beforeEach(async () => {
     await jestPlaywright.resetContext();
   });
 
-  it("should fail with testTimeout of 4000", async () => {
-    await page.goto("http://www.google.com");
-    await page.waitForTimeout(5000);
+  it("should fail with testTimeout of _18000_", async () => {
+    // This test should take the jest testTimeout from jest.config.ts 
+    // hence should fail with timetout of 18000 
+    await page.goto("https://www.whatismybrowser.com/");
+    await page.waitForTimeout(21000);
     await expect(true).toEqual(true);
   });
-  
-  const config: JestPlaywrightConfig = {
-    browsers: ["chromium"],
-    collectCoverage: false,
-    exitOnPageError: false,
-    contextOptions: {},
-    launchOptions: {},
-  };
-  
-  it.jestPlaywrightConfig(
-    config,
-    ", with custom config, should fail with testTimeout of 4000",
-    async ({ page }) => {
-      await page.goto("http://www.google.com");
-      await page.waitForTimeout(5000);
-      await expect(true).toEqual(true);
-    }
-  );
 });
     
